@@ -11,10 +11,10 @@ The board provides the following functions:
 * 2x 4-channel Level shifters to 5V
 * 1x ADC attenuator with input selection (3V3 rail, 5V rail or external pin)
 * 1x Pushbutton
-* 3V3 and 5V I2C Pullups for default I2C pins of S2 and D1
+* 3V3 and 5V I2C Pullups for default I2C pins of S2 and D1 Mini
 
-The board has been designed in a way to allow you maximum flexibility. Every function needs to be enabled via solder jumpers on the bottom PCB side (for default wiring), or you may wire different IOs to the according pin header of the board.  
-The only exclusion are the IOs wired to the 2 level shifters, which are hard wired and cannot be changed. The IOs have been selected to allow you level-shifted SPI or I2C on both S2 and D1 boards.
+The board has been designed in a way to allow you maximum flexibility. Every function needs to be enabled via solder jumpers on the bottom PCB side (for default wiring), or you may wire different IOs to the according pin headers on the board.  
+The only exclusion are the 8 IOs wired to the 2 level shifters, which are hard wired and cannot be changed. The IOs have been selected to allow you level-shifted SPI or I2C for both S2 and D1 boards.
 
 ## Power Supply
 
@@ -32,3 +32,9 @@ When powering the board from a LFP cell, you might want to have 5VDC (in example
 
 The production data has been created for [JLCPCB assembly service](https://jlcpcb.com/). When placing an order, keep in mind that the rotation of several parts (MOSFETs, all ICs) needs to be updated. Cross-check with the KiCAD Layout to verify that all parts will be placed correctly.
 
+## Note on MOSFET usage
+
+If you are switching a device through one of the 3 installed N-Channel MOSFETs, make sure that the switched device does **not have any reference to the input voltage GND** of the ESP-Mini-Base (in example through a data connection like I2C etc.). Chances are high to see magic smoke leaving your setup if you fail to use suitable galvanic isolation (beside the fact that the "switched" device probably won't power off at all)!
+
+Have fun,  
+Juergen
