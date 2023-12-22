@@ -1,5 +1,6 @@
 # ESP-Mini-Base
-Base PCB ("hat") for ESP boards in WEMOS Mini format created with [KiCad EDA](https://www.kicad.org/). Primarily designed for [WEMOS S2 Mini](https://www.wemos.cc/en/latest/s2/s2_mini.html) and [D1 Mini](https://www.wemos.cc/en/latest/d1/d1_mini.html), might work for others / upcoming boards with a compatible pinout.
+Base PCB ("hat") for ESP boards in WEMOS Mini format created with [KiCad EDA](https://www.kicad.org/). Primarily designed for [WEMOS S2 Mini](https://www.wemos.cc/en/latest/s2/s2_mini.html) and [D1 Mini](https://www.wemos.cc/en/latest/d1/d1_mini.html), might work for others / upcoming boards with a compatible pinout.  
+The schematic describes the functionality and options in detail, it is also [available as PDF](pdf/ESP-Mini-Base_v1.0_schematic.pdf).
 
 ## Available functionality
 
@@ -36,10 +37,15 @@ The production data has been created for [JLCPCB assembly service](https://jlcpc
 
 If you are switching a device through one of the 3 installed N-Channel MOSFETs, make sure that the switched device does **not have any reference to the input voltage GND** of the ESP-Mini-Base (in example through a data connection like I2C etc.). Chances are high to see magic smoke leaving your setup if you fail to use suitable galvanic isolation (beside the fact that the "switched" device probably won't power off at all)!  
   
-
+## Pictures
 
 ![Assembled PCB, top side](pics/ESP-Mini-Base-v1.0_Top_Assembled.jpg?raw=true)
 Assembled ESP-Mini-Base v1.0 top side with S2 Mini  
+
+![Rendered PCB, bottom side](pics/ESP-Mini-Base-v1.0_Bot_rendered.jpg?raw=true)
+Rendered view of the bottom side showing I/O and solder jumpers with descriptions.
+
+**Note on I2C Pullup solder-jumpers (3,3 and 5V):** all 3 pins of the jumpers need to be connected with tin solder if you want to enable the pullups.
 
 Have fun,  
 Juergen
