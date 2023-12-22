@@ -23,18 +23,23 @@ There are several ways to power the board, the following table shows you the opt
 | Powered by | Short Solder Jumpers | Notes |
 | --- | --- | --- |
 | 5V/VBUS Pin or USB Port | JP12 | Not recommended for MOSFET usage! At least connect GND wire to J9 if you try to do so|
-| 12VDC through J9 | JP12,JP13 | 5V generated from onboard LDO and supplied to ESP|
+| "12VDC" through J9 | JP12,JP13 | 5V generated from onboard LDO and supplied to ESP. Any supply voltage between 6.25 and 26V accepted by the LDO regulator|
 | 3~3.7VDC through J9 | none | Use to power ESP from LFP battery (in example)|
 
 When powering the board from a LFP cell, you might want to have 5VDC (in example for a LED strip). Mainly for this reason, you have the ability to connect a Boost-converter board to J10. Short the Jumper JP11 and JP10 to 1-2 and you will be able to enable the Boost-converter via IO14 (U2 supply switch).  
 
 ## Note on production data
 
-The production data has been created for [JLCPCB assembly service](https://jlcpcb.com/). When placing an order, keep in mind that the rotation of several parts (MOSFETs, all ICs) needs to be updated. Cross-check with the KiCAD Layout to verify that all parts will be placed correctly.
+The production data has been created for [JLCPCB assembly service](https://jlcpcb.com/). When placing an order, keep in mind that the rotation of several parts (MOSFETs, all ICs, C6) needs to be updated. Cross-check with the KiCAD Layout to verify that all parts will be placed correctly.
 
 ## Note on MOSFET usage
 
-If you are switching a device through one of the 3 installed N-Channel MOSFETs, make sure that the switched device does **not have any reference to the input voltage GND** of the ESP-Mini-Base (in example through a data connection like I2C etc.). Chances are high to see magic smoke leaving your setup if you fail to use suitable galvanic isolation (beside the fact that the "switched" device probably won't power off at all)!
+If you are switching a device through one of the 3 installed N-Channel MOSFETs, make sure that the switched device does **not have any reference to the input voltage GND** of the ESP-Mini-Base (in example through a data connection like I2C etc.). Chances are high to see magic smoke leaving your setup if you fail to use suitable galvanic isolation (beside the fact that the "switched" device probably won't power off at all)!  
+  
+
+
+![Assembled PCB, top side](pics/ESP-Mini-Base-v1.0_Top_Assembled.jpg?raw=true)
+Assembled ESP-Mini-Base v1.0 top side with S2 Mini  
 
 Have fun,  
 Juergen
