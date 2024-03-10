@@ -33,7 +33,7 @@ Although the installed 5V LDO linear regulator supports up to 26V input voltage,
 
 ## Note on production data
 
-The production data has been created for [JLCPCB assembly service](https://jlcpcb.com/). When placing an order, keep in mind that the rotation of several parts (MOSFETs, all ICs, C6) needs to be updated. Cross-check with the KiCAD Layout to verify that all parts will be placed correctly.
+The production data has been created for [JLCPCB assembly service](https://jlcpcb.com/) using the [Fabrication Toolkit Plugin](https://github.com/bennymeg/JLC-Plugin-for-KiCad). When placing an order, keep in mind that the rotation of several parts (MOSFETs, all ICs, C6) needs to be updated. Cross-check with the KiCAD Layout to verify that all parts will be placed correctly.
 
 ## Note on MOSFET usage
 
@@ -50,5 +50,14 @@ Rendered view of the bottom side showing I/O and solder jumpers with description
 
 **Note on I2C Pullup solder-jumpers (3,3 and 5V):** all 3 pins of the jumpers need to be connected with tin solder if you want to enable the pullups.
 
+## Changelog
+
+### v1.1
+- Improved high current traces to MOSFETs
+- Improved heat dissipation of LDO converter (IC1)
+- Upgraded KiCAD files to version 8
+- Set "remove from BoM" flag on all THT parts and solder jumpers
+  
+  
 Have fun,  
 Juergen
