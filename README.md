@@ -50,6 +50,9 @@ Rendered view of the bottom side showing I/O and solder jumpers with description
 
 **Note on I2C Pullup solder-jumpers (3,3 and 5V):** all 3 pins of the jumpers need to be connected with tin solder if you want to enable the pullups.
 
+## ESPHome
+Added sample ESPHome YAML config which uses most of the functionality provided by the ESP-Mini-Base. The sample is intended to be used with the `WEMOS S2 Mini` board.
+
 ## Changelog
 
 ### v1.1
