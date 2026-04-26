@@ -51,7 +51,8 @@ Rendered view of the bottom side showing I/O and solder jumpers with description
 **Note on I2C Pullup solder-jumpers (3,3 and 5V):** all 3 pins of the jumpers need to be connected with tin solder if you want to enable the pullups.
 
 ## ESPHome
-Added sample ESPHome YAML config which uses most of the functionality provided by the ESP-Mini-Base. The sample is intended to be used with the `WEMOS S2 Mini` board.
+Added sample ESPHome YAML config which uses most of the functionality provided by the ESP-Mini-Base. The sample is intended to be used with the `WEMOS S2 Mini` board.  
+**Note on first wired flash:** The web based flashing with ESPHome did not work for me with the `WEMOS S2 Mini`. I had to download the compiled binary firmware and then used the [Adafruit WebSerial ESPTool](https://adafruit.github.io/Adafruit_WebSerial_ESPTool/) which managed to flash the ESP board correctly. Subsequent OTA updates worked perfectly well with ESPHome.
 
 ## Changelog
 
